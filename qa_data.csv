@@ -1,7 +1,13 @@
-Q;A
-What is the Kübler-Ross model?;"<p>5 Stages of Grief
-    1. Denial
-    2. Anger
-    3. Bargaining
-    4. Depression
-    5. Acceptance</p>"
+# Question, Answer, Source
+What is the Kübler-Ross model?;"<p>5 Stages of Grief:</p>
+<ol>
+<li>Denial</li>
+<li>Anger</li>
+<li>Bargaining</li>
+<li>Depression</li>
+<li>Acceptance
+```</li>
+</ol>
+<p>```md ankiMe
+Where is Waldo?
+Waldo is on page 7. Just look a little closer!</p>";template_note.md
