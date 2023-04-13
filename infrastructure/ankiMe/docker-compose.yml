@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  anki:
+    build:
+      context: .
+    environment:
+      - SYNC_USER1=${SYNC_USER_1}
+      - SYNC_BASE=/data
+    volumes:
+      - sync-data:/data
+    restart: always
+    expose:
+      - "8080"
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.ankime.loadbalancer.server.port=8080"
+      - "traefik.http.routers.ankime.rule=Host(`anki.${DOMAIN}`)"
+      - "traefik.http.routers.ankime.entrypoints=web"
+      - "traefik.http.routers..ankime.tls.certresolver=myresolver"
+
+volumes:
+  sync-data:
+networks:
+  web:
+    external: true
